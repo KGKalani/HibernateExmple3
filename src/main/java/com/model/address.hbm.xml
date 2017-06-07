@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="main.java.com.model.Address" table="ADDRESS"
+           schema="KGK">
+        <meta attribute="class-description">
+            This class contains the address details
+        </meta>
+        <id name="id" column="ID" type="int">
+            <generator class="sequence">
+                <param name="sequence">KGK.ADDRESS_ID_SEQUENCE</param>
+            </generator>
+        </id>
+        <property name="streetName" column="STREET_NAME" type="string"/>
+        <property name="cityName" column="CITY_NAME" type="string"/>
+        <property name="stateName" column="STATE_NAME" type="string"/>
+        <property name="zipCode" column="ZIP_CODE" type="string"/>
+    </class>
+</hibernate-mapping>

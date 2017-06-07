@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="main.java.com.model.Certificate" table="CERTIFICATE">
+        <meta attribute="class-description">
+            This class contains the certificate records.
+        </meta>
+        <id name="id" column="ID" type="int">
+            <generator class="sequence">
+                <param name="sequence">KGK.CERTIFICATE_ID_SEQUENCE</param>
+            </generator>
+        </id>
+        <property name="name" column="CERTIFICATE_NAME" type="string"/>
+    </class>
+</hibernate-mapping>
